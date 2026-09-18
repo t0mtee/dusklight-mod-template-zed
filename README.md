@@ -5,6 +5,16 @@ A standalone template for [Dusklight](https://github.com/TwilitRealm/dusklight) 
 See the [Dusklight modding documentation](https://github.com/TwilitRealm/dusklight/blob/main/docs/modding.md)
 for the full mod API: services, hooking game functions, asset overlays, and more.
 
+## Zed
+
+This repo comes with some Zed tasks - `configure` and `build`. `configure` is designed to use an already checked-out Dusklight repo, which should be a sibling to this project. So, for example:
+
+```
+Dusklight/
+├─ dusklight/ `-> checked out repository`
+└─ mod_project/
+```
+
 ## Quick start
 
 1. Click "Use this template" to create a new repository for your mod.
@@ -45,13 +55,14 @@ and mod services.
 ## GitHub Actions
 
 The included GitHub Actions workflow builds the mod for the following platforms:
+
 - Windows (AMD64 & ARM64)
 - macOS (Apple Silicon & Intel)
 - iOS (Apple Silicon)
 - Linux (x86_64 & aarch64)
 - Android (aarch64)
 
-It then merges the per-platform builds into a single `.dusk` supporting all platforms. (Artifact `mod-combined`) 
+It then merges the per-platform builds into a single `.dusk` supporting all platforms. (Artifact `mod-combined`)
 
 Pushing a tag to the repository creates a GitHub release with the combined bundle.
 
